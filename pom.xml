@@ -8,12 +8,17 @@
         <version>3.0.2</version>
         <relativePath/>
     </parent>
-    <groupId>com.dragon.rpc</groupId>
+    <groupId>com.dragon.pay</groupId>
     <artifactId>dragon-pay</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>dragon-pay-gateway</module>
+        <module>dragon-pay-merchant</module>
+        <module>dragon-pay-common</module>
+        <module>dragon-pay-payment</module>
+        <module>dragon-pay-user</module>
+        <module>dragon-pay-account</module>
     </modules>
 
     <properties>
