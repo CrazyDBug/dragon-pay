@@ -15,3 +15,11 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+/dragon-pay.iml
+/dragon-pay-account.iml
+/dragon-pay-common.iml
+/dragon-pay-gateway.iml
+/dragon-pay-merchant.iml
+/dragon-pay-payment.iml
+/dragon-pay-user.iml
+/.idea/
