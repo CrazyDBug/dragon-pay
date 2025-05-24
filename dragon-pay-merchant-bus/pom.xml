@@ -7,15 +7,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>dragon-pay-common</artifactId>
-    <packaging>pom</packaging>
-    <description>公共服务</description>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-    </dependencies>
-
+    <artifactId>dragon-pay-merchant-bus</artifactId>
+    <description>商户服务前置路由</description>
 </project>

@@ -23,3 +23,6 @@ buildNumber.properties
 /dragon-pay-payment.iml
 /dragon-pay-user.iml
 /.idea/
+/dragon-pay-common/dragon-pay-common.iml
+
+*.iml

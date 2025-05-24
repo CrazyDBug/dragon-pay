@@ -19,6 +19,9 @@
         <module>dragon-pay-payment</module>
         <module>dragon-pay-user</module>
         <module>dragon-pay-account</module>
+        <module>dragon-pay-codegen</module>
+        <module>dragon-pay-user-bus</module>
+        <module>dragon-pay-merchant-bus</module>
     </modules>
 
     <properties>
