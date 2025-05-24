@@ -1,0 +1,13 @@
+code-generator:
+  author: 赌狗
+  output-dir: ./src/main/java
+  parent-package: com.dragon.pay
+  module-name: user
+  db:
+    url: jdbc:mysql://localhost:3306/dragon-pay?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  include-tables:
+    - sys_user
+#    - sys_role
+  table-prefix: sys_
