@@ -9,4 +9,11 @@
 
     <artifactId>dragon-pay-merchant-bus</artifactId>
     <description>商户服务前置路由</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 </project>

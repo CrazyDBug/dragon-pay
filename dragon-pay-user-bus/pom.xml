@@ -9,4 +9,24 @@
 
     <artifactId>dragon-pay-user-bus</artifactId>
     <description>用户服务前置路由</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dragon.pay</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>dragon-pay-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot3-starter</artifactId>
+            <version>1.43.0</version>
+        </dependency>
+    </dependencies>
 </project>

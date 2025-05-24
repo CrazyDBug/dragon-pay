@@ -1,0 +1,1 @@
+1. 忽略大小写 https://bbs.huaweicloud.com/blogs/345131

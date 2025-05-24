@@ -8,6 +8,7 @@ code-generator:
     username: root
     password: root
   include-tables:
-    - sys_user
+    - user
+#    - sys_user
 #    - sys_role
   table-prefix: sys_
