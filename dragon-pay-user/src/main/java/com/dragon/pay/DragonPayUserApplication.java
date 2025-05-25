@@ -10,8 +10,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  */
 @SpringBootApplication(scanBasePackages = "com.dragon.pay")
 @MapperScan("com.dragon.pay.user.mapper")
-public class DragonUserApplication {
+public class DragonPayUserApplication {
     public static void main(String[] args) {
-        new SpringApplicationBuilder(DragonUserApplication.class).run(args);
+        new SpringApplicationBuilder(DragonPayUserApplication.class).run(args);
     }
 }

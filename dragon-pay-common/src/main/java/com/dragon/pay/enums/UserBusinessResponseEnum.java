@@ -1,14 +1,13 @@
 package com.dragon.pay.enums;
 
 import com.dragon.pay.assertion.BusinessExceptionAssert;
+import com.dragon.pay.exception.BusinessException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author 赌狗
- * @since 2025-05-24 12:36
+ * 用户业务异常枚举
  */
-
 @Getter
 @AllArgsConstructor
 public enum UserBusinessResponseEnum implements BusinessExceptionAssert {
