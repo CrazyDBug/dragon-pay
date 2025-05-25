@@ -1,7 +1,7 @@
-package com.dragon.pay.bus.feign;
+package com.dragon.pay.user.bus.feign;
 
-import com.dragon.pay.bus.form.LoginForm;
-import com.dragon.pay.bus.form.RegisterUserForm;
+import com.dragon.pay.user.bus.form.LoginForm;
+import com.dragon.pay.user.bus.form.RegisterUserForm;
 import com.dragon.pay.model.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;

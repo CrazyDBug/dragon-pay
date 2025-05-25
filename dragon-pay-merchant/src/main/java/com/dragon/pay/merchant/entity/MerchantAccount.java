@@ -1,9 +1,6 @@
-package com.dragon.pay.user.entity;
+package com.dragon.pay.merchant.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,44 +11,49 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 用户表
+ * 商户登录账户表
  * </p>
  *
  * @author 赌狗
- * @since 2025-05-24
+ * @since 2025-05-25
  */
 @Getter
 @Setter
 @ToString
 @Builder
-@TableName("user")
-public class User implements Serializable {
+@TableName("merchant_account")
+public class MerchantAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 主键ID（雪花ID/自增ID）
+     * 主键ID（雪花ID/自增ID或雪花算法ID）
      */
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
-     * 登录用户名
+     * 手机号，唯一，作为登录凭证
+     */
+    private String phone;
+
+    /**
+     * 登录用户名（昵称），非唯一，支持为空
      */
     private String username;
 
     /**
-     * 真实姓名
+     * 真实姓名，非必填
      */
     private String realname;
 
     /**
-     * 加密后的密码
+     * 加密后的密码（可为空，支持验证码登录场景）
      */
     private String password;
 
     /**
-     * 用户状态（0-正常，1-禁用）
+     * 账号状态（0-正常，1-禁用）
      */
     private Boolean status;
 
@@ -59,25 +61,28 @@ public class User implements Serializable {
      * 逻辑删除标志（0-正常，1-删除）
      */
     @TableLogic
+    @TableField(fill = FieldFill.INSERT)
     private Boolean delFlag;
 
     /**
-     * 创建人
+     * 创建人账号或ID
      */
     private String createBy;
 
     /**
-     * 更新人
+     * 更新人账号或ID
      */
     private String updateBy;
 
     /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 }

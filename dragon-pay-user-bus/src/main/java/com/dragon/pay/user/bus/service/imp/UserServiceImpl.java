@@ -1,11 +1,11 @@
-package com.dragon.pay.bus.service.imp;
+package com.dragon.pay.user.bus.service.imp;
 
 import cn.dev33.satoken.stp.StpUtil;
-import com.dragon.pay.bus.feign.UserServiceApi;
-import com.dragon.pay.bus.form.LoginForm;
-import com.dragon.pay.bus.form.RegisterUserForm;
-import com.dragon.pay.bus.service.UserService;
-import com.dragon.pay.bus.vo.User;
+import com.dragon.pay.user.bus.feign.UserServiceApi;
+import com.dragon.pay.user.bus.form.LoginForm;
+import com.dragon.pay.user.bus.form.RegisterUserForm;
+import com.dragon.pay.user.bus.service.UserService;
+import com.dragon.pay.user.bus.vo.Account;
 import com.dragon.pay.enums.UserBusinessResponseEnum;
 import com.dragon.pay.model.Result;
 import lombok.extern.slf4j.Slf4j;
@@ -37,10 +37,10 @@ public class UserServiceImpl implements UserService {
     }
 
     public Result loginSaToken(Result<String> r) {
-        if (StrUtil.isEmpty(r.getData())) return r;//已经注册直接返回
+        if (StrUtil.isEmpty(r.getData())) return r;
         StpUtil.login(Long.parseLong(r.getData()));
         String token = StpUtil.getTokenInfo().getTokenValue();
         UserBusinessResponseEnum.SA_LOGIN_FAIL.assertNotEmpty(token);
-        return new Result(new User(token));
+        return new Result(new Account(token));
     }
 }

@@ -2,13 +2,13 @@ code-generator:
   author: 赌狗
   output-dir: ./src/main/java
   parent-package: com.dragon.pay
-  module-name: user
+  module-name: merchant
+  base-package: com.dragon.pay.merchant
   db:
     url: jdbc:mysql://localhost:3306/dragon-pay?serverTimezone=Asia/Shanghai
     username: root
     password: root
   include-tables:
-    - user
-#    - sys_user
-#    - sys_role
+    - merchant_account
+#    - user
   table-prefix: sys_

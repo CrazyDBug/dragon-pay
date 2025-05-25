@@ -1,7 +1,10 @@
 package com.dragon.pay;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
+import com.baomidou.mybatisplus.generator.fill.Column;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -45,7 +48,16 @@ public class CodeGeneratorRunner implements CommandLineRunner {
                             .formatServiceFileName("%sService")
                             .formatServiceImplFileName("%sServiceImpl")
                             .entityBuilder()
-                            .enableLombok(); // ✅ 启用 Lombok 注解替代 Getter/Setter
+                            .enableLombok()
+                            .enableTableFieldAnnotation()
+                            .idType(IdType.ASSIGN_ID)
+                            .logicDeleteColumnName("del_flag") // ✅ 设置逻辑删除字段（数据库列名）
+                            .logicDeletePropertyName("delFlag") // ✅ 设置逻辑删除字段（实体属性名）
+                            .addTableFills(
+                                    new Column("create_time", FieldFill.INSERT),
+                                    new Column("update_time", FieldFill.INSERT_UPDATE),
+                                    new Column("del_flag", FieldFill.INSERT)
+                            );
                 })
                 .execute();
     }

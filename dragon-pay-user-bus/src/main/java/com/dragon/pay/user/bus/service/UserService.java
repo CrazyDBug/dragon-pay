@@ -1,7 +1,7 @@
-package com.dragon.pay.bus.service;
+package com.dragon.pay.user.bus.service;
 
-import com.dragon.pay.bus.form.LoginForm;
-import com.dragon.pay.bus.form.RegisterUserForm;
+import com.dragon.pay.user.bus.form.LoginForm;
+import com.dragon.pay.user.bus.form.RegisterUserForm;
 import com.dragon.pay.model.Result;
 
 /**

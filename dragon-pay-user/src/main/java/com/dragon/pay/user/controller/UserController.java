@@ -24,14 +24,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/user")
-@Tag(name = "UserController", description = "用户核心业务处理接口")
+@Tag(name = "用户模块", description = "用户核心业务处理接口")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
     @PostMapping("/register")
-    @Operation(summary = "新用户注册接口")
+    @Operation(summary = "注册新用户")
     public Result<String> registerCustomer(@RequestBody @Valid RegisterUserForm form) {
         return new Result<>(userService.registerCustomer(form));
     }

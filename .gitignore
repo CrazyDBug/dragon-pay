@@ -26,3 +26,5 @@ buildNumber.properties
 /dragon-pay-common/dragon-pay-common.iml
 
 *.iml
+/out/
+/.vscode/

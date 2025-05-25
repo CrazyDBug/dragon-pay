@@ -1,8 +1,8 @@
-package com.dragon.pay.bus.controller;
+package com.dragon.pay.user.bus.controller;
 
-import com.dragon.pay.bus.form.LoginForm;
-import com.dragon.pay.bus.form.RegisterUserForm;
-import com.dragon.pay.bus.service.UserService;
+import com.dragon.pay.user.bus.form.LoginForm;
+import com.dragon.pay.user.bus.form.RegisterUserForm;
+import com.dragon.pay.user.bus.service.UserService;
 import com.dragon.pay.model.Result;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2025-05-24 10:28
  */
 @RestController
-@RequestMapping("/user")
-@Tag(name = "UserController", description = "用户模块前置服务接口")
+@RequestMapping("/api/user")
+@Tag(name = "用户前置服务模块", description = "用户模块前置服务接口")
 public class UserController {
     @Autowired
     private UserService userService;

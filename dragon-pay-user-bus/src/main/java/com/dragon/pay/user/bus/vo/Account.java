@@ -1,4 +1,4 @@
-package com.dragon.pay.bus.vo;
+package com.dragon.pay.user.bus.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,6 +9,6 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class User {
+public class Account {
     private String token;
 }

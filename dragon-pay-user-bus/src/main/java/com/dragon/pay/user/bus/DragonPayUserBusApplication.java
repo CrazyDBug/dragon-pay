@@ -1,4 +1,4 @@
-package com.dragon.pay.bus;
+package com.dragon.pay.user.bus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
